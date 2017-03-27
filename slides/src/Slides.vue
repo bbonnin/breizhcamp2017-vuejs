@@ -19,6 +19,21 @@
     <md-layout md-gutter>
       <md-layout md-flex="25" class="big-area">
         <div class="big-area-title">
+          <h1>v-on</h1>
+        </div>
+      </md-layout>
+      <md-layout>
+        <pre v-highlightjs><code class="xml">
+{{ vOn }}
+        </code></pre>
+      </md-layout>
+    </md-layout>
+  </Slide>
+
+  <Slide animation="slide-in-right" class="no-padding">
+    <md-layout md-gutter>
+      <md-layout md-flex="25" class="big-area">
+        <div class="big-area-title">
           <h1>{...}</h1>
         </div>
       </md-layout>
@@ -131,10 +146,14 @@ const s = new Date().toString()
 </template>
 
 <script>
+/* eslint-disable */
+import { vOn } from './examples'
 
 var confdata = {
   name: 'BreizhCamp'
 }
+
+console.log(vOn)
 
 export default {
   name: 'Slides',
@@ -143,7 +162,8 @@ export default {
     return {
       t: '<div id="app">\n    Bonjour {{ name }} !\n</div>',
       command: '',
-      confdata
+      confdata,
+      vOn
     }
   },
 
