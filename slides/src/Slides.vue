@@ -131,6 +131,7 @@ const s = new Date().toString()
 </template>
 
 <script>
+
 var confdata = {
   name: 'BreizhCamp'
 }
@@ -148,7 +149,7 @@ export default {
 
   methods: {
     onSubmitCommand () {
-      eval(this.command);
+      eval(this.command); //eslint-disable-line
     }
   }
 }
