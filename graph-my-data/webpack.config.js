@@ -13,12 +13,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
-          // other vue-loader options go here
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
