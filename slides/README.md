@@ -29,7 +29,7 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# Help
+## Links
 https://material.io/guidelines/style/color.html#color-color-palette
 https://vuematerial.github.io/#/themes/configuration
 http://www.chartjs.org/docs/#doughnut-pie-chart-example-usage
@@ -50,4 +50,24 @@ https://alligator.io/vuejs/e2e-testing-testcafe/
 
 https://auth0.com/blog/introduction-to-progressive-apps-part-one
 
+## Examples
 
+```xml
+<div id="app">
+  <div>{{ counter }}</div>
+  <button v-on:click="increment">Increment</button>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      increment() { 
+        this.counter++;
+      }
+    }
+  });
+</script>
+```
