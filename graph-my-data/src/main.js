@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueMaterial from 'vue-material'
+/*import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import App from './App.vue'
 import router from './router'
@@ -12,14 +12,14 @@ Vue.material.registerTheme({
   }
 })
 Vue.material.setCurrentTheme('app')
-
+*/
 
 new Vue({
   el: '#app',
 
-  router,
+  //router,
 
-  render: h => h(App)
+  //render: h => h(App)
   //template: '<App/>',
   //components: { App }
 })

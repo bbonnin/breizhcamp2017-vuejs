@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo BreizhCamp</title>
+    
+    <style>
+    .content>.container {
+      padding: 1rem 3rem;
+    }
+    </style>
+  </head>
+  <body>
+  
+
+    <v-app id="demo1">
+      <v-toolbar class-old="cyan darken-4 white--text">
+        <v-toolbar-title>A chart in 2 seconds!</v-toolbar-title>
+      </v-toolbar>
+      <main>
+        <v-content>
+          <v-container fluid>
+            <v-row>
+              <v-col xs4 key="1">
+                <v-card>
+                    <v-card-title>Your data</v-card-title>
+                    <v-card-text>
+                    <v-card-row height="300px">
+                        <v-text-field
+                          v-model="csvdata"
+                          label="Enter your data (csv format)"
+                          multi-line
+                        ></v-text-field>
+                        </v-card-row>
+                    </v-card-text>
+                  
+                  <v-card-row actions>
+                    <v-btn light default v-on:click.native="clear">Clear</v-btn>
+                  </v-card-row>
+                </v-card>
+              </v-col>
+
+              <v-col xs4 key="2">
+                <v-card>
+                  <v-card-title>Data table</v-card-title>
+                  <v-card-text>
+                    <v-card-row height="300px">
+                      <div v-if="labels.length > 0" style="width:100%">
+
+                        <table>
+                          <tr><th v-for="label in labels">{{ label }}</th></tr>
+                          <tr><td v-for="value in values">{{ value }}</td></tr>
+                        </table>
+                      
+                      </div>
+
+                      <div v-else  style="width:100%" class="text-xs-center">No data</div>
+                    
+                    </v-card-row>
+                  </v-card-text>
+                  <v-card-row actions>
+                    <v-btn light default v-on:click.native="drawChart">Show me a chart</v-btn>
+                  </v-card-row>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-content>
+      </main>
+    </v-app>
+
+    <script src="/dist/build.js"></script>
+  
+  </body>
+</html>
