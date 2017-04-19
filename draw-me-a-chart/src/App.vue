@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-
-    <!-- component matched by the route will render here -->
-    <!-- <router-view></router-view> -->
-  
+    <router-view></router-view>
   </div>
 </template>
 

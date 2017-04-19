@@ -5,7 +5,7 @@ import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify)
 
 
-window.demo = new Vue({
+new Vue({
     el: '#demo1',
 
     data: {
