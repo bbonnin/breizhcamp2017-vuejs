@@ -1,14 +1,4 @@
 <template>
-
-    <!--div :style="{ 'max-width': width + 'px', 'max-height': height + 'px' }">
-        
-        <canvas v-show="labels.length > 0" 
-                v-bind:id="id" 
-                v-bind:width="width" v-bind:height="height"></canvas>
-
-        <div v-show="labels.length === 0">No data</div>
-
-    </div-->
     <div class="chart-container">
         
         <canvas v-show="labels.length > 0" 
